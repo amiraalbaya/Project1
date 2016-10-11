@@ -1,0 +1,12 @@
+<h3><a href="/students/new"  >Add new student</a></h3>
+<h1>The students we currently have in the system are:</h1>
+	<%@students.each do |id, andrewid, firstname, lastname, major, email , graduate|%>
+	<ul>
+		<li>
+			<a href="/students/<%=id%>">&nbsp;<%=andrewid%><%=firstname%>&nbsp;<%=lastname%>&nbsp;<%=major%>&nbsp;<%=email%>&nbsp;<%=graduate%></a>
+			
+			<a href="/students/<%=id%>/edit" class="button tiny radius round">Edit</a>&nbsp;
+			<a href="/students/<%=id%>/delete" class="button tiny radius round alert">Delete</a>
+		</li>
+	</ul>
+<%end%>
