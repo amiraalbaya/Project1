@@ -1,30 +1,30 @@
-<form action="/students" method="post">
+<form action='/students/<%=@students[0][0]%>' method="post">
 	<div class="row">
 		<div class="large-6 columns">
 			<div class="row collapse prefix-radius">
 			<div class="small-3 columns">
 					<span class="prefix">Student ID  </span>
-					<input type="text" name="id" ><br/>
+					<input type="text" name="andrewid" value="<%=@students[0][1]%>"><br/>
 				</div>
 				<div class="small-3 columns">
 					<span class="prefix">Student First Name</span>
-					<input type="text" name="firstname" ><br/>
+					<input type="text" name="firstname" value="<%=@students[0][2]%>" ><br/>
 				</div>
 				<div class="small-3 columns">
 					<span class="prefix">Student Last Name</span>
-					<input type="text" name="lastname" ><br/>
+					<input type="text" name="lastname" value="<%=@students[0][3]%>"><br/>
 				</div>	
 				<div class="small-3 columns">
 					<span class="prefix">Student major</span>
-					<input type="text" name="major" ><br/>
+					<input type="text" name="major" value="<%=@students[0][4]%>" ><br/>
 				</div>
 				<div class="small-3 columns">
 					<span class="prefix">Student email</span>
-					<input type="text" name="email" ><br/>
+					<input type="text" name="email" value="<%=@students[0][5]%>" ><br/>
 				</div>	
 				<div class="small-3 columns">
-					<span class="prefix">Is the student a graduate?</span>
-					<input type="text" name="graduate" ><br/>
+					<span class="prefix">Is the student a graduate?(yes or no)</span>
+					<input type="text" name="graduate" value="<%=@students[0][6]%>" ><br/>
 				</div>
 			</div>
 		</div>

@@ -1,12 +1,139 @@
 <h3><a href="/students/new"  >Add new student</a></h3>
-<h1>The students we currently have in the system are:</h1>
-	<%@students.each do |id, andrewid, firstname, lastname, major, email , graduate|%>
-	<ul>
-		<li>
-			<a href="/students/<%=id%>">&nbsp;<%=andrewid%><%=firstname%>&nbsp;<%=lastname%>&nbsp;<%=major%>&nbsp;<%=email%>&nbsp;<%=graduate%></a>
-			
+<h3>All students we currently have in the system are:</h3>
+
+	<table>
+	<thead>
+
+			<tr>
+			<th> Student Id </th>
+			<th> First Name</th>
+			<th> Last Name</th>
+			<th> Major</th>
+			<th> Email </th>
+			<th> Graduate</th>
+			</tr>
+			</thead>
+			<tbody><%@students.each do |id, andrewid, firstname, lastname, major, email , graduate|%>
+			<tr>
+			<td>
+			<a href="/students/<%=id%>">
+			<%=andrewid%>
+			</a></td>
+			<td>
+			<a href="/students/<%=id%>">
+			<%=firstname%>
+			</a></td>
+			<td>
+			<a href="/students/<%=id%>">
+			<%=lastname%>
+			</a></td>
+			<td>
+			<%=major%>
+			</a></td>
+			<td>
+			<%=email%>
+			</td>
+			<td>
+			<%=graduate%>
+			</td>
+			<td>
 			<a href="/students/<%=id%>/edit" class="button tiny radius round">Edit</a>&nbsp;
 			<a href="/students/<%=id%>/delete" class="button tiny radius round alert">Delete</a>
-		</li>
-	</ul>
-<%end%>
+			</td>
+			</tr>
+			<%end%>
+			</tbody>
+	</table>
+	
+
+
+	<h3>The current students we currently have in the system are:</h3>
+
+	<table>
+	<thead>
+
+			<tr>
+			<th> Student Id </th>
+			<th> First Name</th>
+			<th> Last Name</th>
+			<th> Major</th>
+			<th> Email </th>
+			<th> Graduate</th>
+			</tr>
+			</thead>
+			<tbody>	<%@nonalumni.each do |id, andrewid, firstname, lastname, major, email , graduate|%>
+			<tr>
+			<td>
+			<a href="/students/<%=id%>">
+			<%=andrewid%>
+			</a></td>
+			<td>
+			<a href="/students/<%=id%>">
+			<%=firstname%>
+			</a></td>
+			<td>
+			<a href="/students/<%=id%>">
+			<%=lastname%>
+			</a></td>
+			<td>
+			<%=major%>
+			</a></td>
+			<td>
+			<%=email%>
+			</td>
+			<td>
+			<%=graduate%>
+			</td>
+			<td>
+			<a href="/students/<%=id%>/edit" class="button tiny radius round">Edit</a>&nbsp;
+			<a href="/students/<%=id%>/delete" class="button tiny radius round alert">Delete</a>
+			</td>
+			</tr>
+			<%end%>
+			</tbody>
+	</table>
+
+<h3>The Alumni we currently have in the system are:</h3>
+	<table>
+	<thead>
+
+			<tr>
+			<th> Student Id </th>
+			<th> First Name</th>
+			<th> Last Name</th>
+			<th> Major</th>
+			<th> Email </th>
+			<th> Graduate</th>
+			</tr>
+			</thead>
+			<tbody><%@graduated.each do |id, andrewid, firstname, lastname, major, email , graduate|%>
+			<tr>
+			<td>
+			<a href="/students/<%=id%>">
+			<%=andrewid%>
+			</a></td>
+			<td>
+			<a href="/students/<%=id%>">
+			<%=firstname%>
+			</a></td>
+			<td>
+			<a href="/students/<%=id%>">
+			<%=lastname%>
+			</a></td>
+			<td>
+			<%=major%>
+			</a></td>
+			<td>
+			<%=email%>
+			</td>
+			<td>
+			<%=graduate%>
+			</td>
+			<td>
+			<a href="/students/<%=id%>/edit" class="button tiny radius round">Edit</a>&nbsp;
+			<a href="/students/<%=id%>/delete" class="button tiny radius round alert">Delete</a>
+			</td>
+			</tr>
+			<%end%>
+			</tbody>
+	</table>
